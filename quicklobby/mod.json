@@ -1,0 +1,8 @@
+{
+  "name": "quicklobby",
+  "version": "0.0.1",
+  "label": "Quick Lobby",
+  "description": "Adds a quick-access lobby button to the main menu.",
+  "ignoreInCompatibilityChecks": true,
+  "dependencies": ["0ad"]
+}

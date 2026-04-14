@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<objects>
+
+	<script directory="gui/common/"/>
+	<script directory="gui/prelobby/common/credentials/"/>
+	<script directory="gui/prelobby/common/feedback/"/>
+	<script directory="gui/prelobby/common/terms/"/>
+	<script directory="gui/prelobby/quicklogin/"/>
+	<script file="gui/lobby/password.js"/>
+
+	<object size="0 0 100% 100%">
+  		<action on="Tick">onTick();</action>
+
+  		<object name="username" type="input" style="ModernInput" hidden="true" size="0 0 0 0">
+  			<action on="TextEdit">onUsernameEdit();</action>
+  		</object>
+
+  		<object name="password" type="input" style="ModernInput" hidden="true" size="0 0 0 0" mask="true"
+  mask_char="*">
+  			<action on="TextEdit">updateFeedback();</action>
+  		</object>
+
+  		<object name="feedback" type="text" style="ModernLabelText" hidden="true" size="0 0 0 0"/>
+
+  		<object name="cancel" type="button" style="ModernButtonRed" hidden="true" size="0 0 0 0"/>
+  		<object name="continue" type="button" style="ModernButtonRed" hidden="true" size="0 0 0 0">
+  			<action on="Press">continueButton();</action>
+  		</object>
+
+  		<repeat count="3" var="n">
+  			<object name="termsButton[n]" type="button" style="ModernButtonRed" hidden="true" size="0 0 0 0"/>
+  		</repeat>
+  	</object>
+
+</objects>
