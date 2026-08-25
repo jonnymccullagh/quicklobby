@@ -209,6 +209,7 @@ export const mainMenuItems = [
   	{
   		"caption": translate("Quick Lobby"),
   		"tooltip": quickLobbyTooltip(),
+		"style": "QuickLobbyButton",
   		"enabled": () => !!Engine.StartXmppClient && hasQuickLobbyCredentials(),
   		"onPress": () =>
   		{
